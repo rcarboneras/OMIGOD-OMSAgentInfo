@@ -1,5 +1,8 @@
 # OMIGOD-OMSAgentInfo
-PowerShell Scripts created to detect machines afected by OMI vulnerability: CVE-2021-38645, CVE-2021-38649, CVE-2021-38648, and CVE-2021-38647
+PowerShell Scripts created to detect machines afected by OMI vulnerability: CVE-2021-38645, CVE-2021-38649, CVE-2021-38648, and CVE-2021-38647, based on OMS Agent version from clients.
+
+Please to check OMI versions inside Azure VMs, refers to this other script:
+[OMIcheck](https://github.com/microsoft/OMS-Agent-for-Linux)
 
 
 [Additional Guidance Regarding OMI Vulnerabilities within Azure VM Management Extensions](https://msrc-blog.microsoft.com/2021/09/16/additional-guidance-regarding-omi-vulnerabilities-within-azure-vm-management-extensions)
