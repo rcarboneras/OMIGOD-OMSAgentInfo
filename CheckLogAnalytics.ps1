@@ -1,11 +1,11 @@
 ﻿# This scripts query all Analytics workspaces in all subscriptions and gets the version of the Log analytics agent for every client machine, among other properties 
-#LogAnalytics query
+# LogAnalytics query
 
 $query= @"
 Heartbeat
-| summarize arg_max(TimeGenerated, *) by SourceComputerId
-| where OSType == "Linux"
-| project  Computer,ComputerIP,Version,OSName,OSMajorVersion,TimeGenerated
+| summarize arg_max(TimeGenerated, *) by Computer
+| where OSType == "Linux" and  ResourceProvider != "Microsoft.ContainerService"
+| project  TimeGenerated,Computer,ComputerIP,Version,OSName,OSMajorVersion,ResourceProvider
 "@
 
 
